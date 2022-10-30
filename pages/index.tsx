@@ -13,14 +13,17 @@ class HomePage extends React.Component<PropsType, StatesType> {
 
     render() {
         return (
-            <Card
-                className="w-64 h-64 ml-10 mt-10 border border-gray-400"
-                image={TestingImage}
-                imageAlt={"testing"}
-                title={"My cool card!"}
-            >
-                some cool content
-            </Card>
+            <div>
+                <Card
+                    className="w-64 h-64 ml-10 mt-10"
+                    image={TestingImage}
+                    imageAlt={"testing"}
+                    title={"My cool card!"}
+                >
+                    some cool content
+                    <button>test</button>
+                </Card>
+            </div>
         );
     }
 }
