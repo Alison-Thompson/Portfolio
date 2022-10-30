@@ -2,9 +2,9 @@ import React from "react";
 import Image from "next/image";
 
 type PropsType = {
-    image: any // StaticImageData
+    image: any, // StaticImageData
     imageAlt: string,
-    title: string,
+    title: React.ReactNode,
     id?: string,
     className?: string,
     style?: React.CSSProperties,
@@ -27,8 +27,8 @@ class Card extends React.Component<PropsType, StatesType> {
     render() {
         return (
             <div 
-                className={ this.props.className + " relative rounded-lg group cursor-pointer border border-gray-400" } 
-                id={ this.props.id } 
+                className={ (this.props.className ? this.props.className : "") + " relative rounded-lg group cursor-pointer border border-gray-400" } 
+                id={ (this.props.id ? this.props.id : "") } 
                 style={ this.props.style }
                 onClick={() => {
                     this.setState({
@@ -74,7 +74,7 @@ class Card extends React.Component<PropsType, StatesType> {
                 {/* Title Div */}
                 <div
                     className={`
-                        rounded-lg text-white transition-all duration-300 z-3 absolute
+                        rounded-lg text-primary-light transition-all duration-300 z-3 absolute
                         top-0 w-full h-full flex justify-center items-center 
                         ${this.state.clicked ? "opacity-0" : "opacity-100 group-hover:opacity-0"}
                     `}

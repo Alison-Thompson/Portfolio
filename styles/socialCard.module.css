@@ -1,0 +1,22 @@
+.social-card {
+    @apply rounded-lg border border-gray-400 p-2 relative text-white
+    hover:text-black transition-all duration-500;
+    aspect-ratio: 1.6 / .8;
+    width: 56vmin;
+    background: linear-gradient(
+        130deg,
+        #383838 0% 33%,
+        #4581b0 66%,
+        #50a8eb 83%,
+        #f28e29 95%,
+        #f5e90c 100%
+    );
+    background-size: 300% 300%;
+    background-position: 0% 0%;
+    transition: background-position 350ms ease;
+}
+
+.social-card:hover {
+    background-position: 100% 100%;
+};
+
